@@ -1,0 +1,37 @@
+<div class="container p-3">
+    <div class="card">
+        <div class="card-header">
+            <h3>Datos basicos usuarios</h3>
+        </div>
+        <div class="card-body">
+            <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+                <div class="mb-3">
+                    <label for="InputName" class="form-label">Nombre completo</label>
+                    <input type="text" class="form-control" id="InputName" formControlName="name" />
+                </div>
+                <div class="mb-3">
+                    <label for="InputPhone" class="form-label">Telefono</label>
+                    <input type="number" class="form-control" id="InputPhone" formControlName="phone"/>
+                </div>
+                <div class="mb-3">
+                    <label for="InputEmail" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="InputEmail" formControlName="email" />
+                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="InputCity" class="form-label">Ciudad</label>
+                    <input type="text" class="form-control" id="InputCity" formControlName="city"/>
+                </div>
+                <div class="mb-3">
+                    <label for="InputSection" class="form-label">Departamento</label>
+                    <input type="text" class="form-control" id="InputSection" formControlName="section"/>
+                </div>
+                <div class="mb-3">
+                    <label for="InputAddress" class="form-label">Direccion</label>
+                    <input type="text" class="form-control" id="InputAddress" formControlName="address"/>
+                </div>
+                <button type="submit" class="btn btn-primary col-md-1">Enviar</button>
+            </form>
+        </div>
+    </div>
+</div>

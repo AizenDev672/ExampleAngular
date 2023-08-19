@@ -1,0 +1,40 @@
+<section>
+    <div class="container p-2">
+        <div class="card">
+            <div class="card-header">
+                <h2>Carritos de compras</h2>
+            </div>
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Title</th>
+                            <th scope="col">Author</th>
+                            <th scope="col">Genre</th>
+                            <th scope="col">Category</th>
+                            <th scope="col">Number Pages</th>
+                            <th scope="col">Year Publication</th>
+                            <th scope="col">Eliminar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let book of cartItmes">
+                            <th scope="row">{{ book.id }}</th>
+                            <th>{{ book.name }}</th>
+                            <th>{{ book.author }}</th>
+                            <th>{{ book.genre }}</th>
+                            <th>{{ book.category }}</th>
+                            <th>{{ book.numPage }}</th>
+                            <th>{{ book.Yearpublucation }}</th>
+                            <th><button type="button" class="btn btn-danger"  (click)="removeFromCart(book)"> <i class="fa-solid fa-trash-can"></i> </button></th>
+                        </tr>
+                    </tbody>
+                </table>
+                <div *ngIf="cartItmes.length > 0">
+                    <button type="button" class="btn btn-info" (click)="continueBuy()">Continuar la compra</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

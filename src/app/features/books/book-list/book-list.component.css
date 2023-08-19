@@ -1,0 +1,16 @@
+.grid-book {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+}
+
+.item-book {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-button-book {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
